@@ -7,7 +7,6 @@
 //  * @param {WebpackConfigHelpers} helpers - object with useful helpers when working with config.
 //  *
 import GoogleFontsPlugin from 'google-fonts-webpack-plugin';
-import AutoDllPlugin from 'autodll-webpack-plugin';
 
 export default function (config, env, helpers) {
   config.plugins = config.plugins.concat([
@@ -28,7 +27,6 @@ export default function (config, env, helpers) {
   ])
 
   config.module.loaders = config.module.loaders.concat([
-    {test: /\.(gif|png|jpe?g|jpg|svg)$/i, loader: 'file-loader'},
     {
       test: /\.(gif|png|jpe?g|jpg|svg)$/i,
       loader: 'image-webpack-loader',

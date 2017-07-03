@@ -13,7 +13,7 @@ export default () => (
 	<div id="app">
 		<Header />
 		<Router>
-			<Home loading={() => <div>loading...</div>} path="/" />
+			<Home path="/" />
       <Profile path="/profile" />
       <Profile path="/profile/:user" />
 		</Router>

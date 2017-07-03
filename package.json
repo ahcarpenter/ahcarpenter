@@ -9,8 +9,7 @@
     "serve": "preact build && preact serve",
     "dev": "preact watch",
     "test": "eslint src && preact test",
-    "heroku-postbuild": "yarn run build",
-    "serve:heroku": "preact serve --server superstatic --port $PORT"
+    "heroku-postbuild": "yarn run build"
   },
   "keywords": [],
   "author": "",
@@ -23,7 +22,6 @@
     "if-env": "^1.0.0"
   },
   "dependencies": {
-    "autodll-webpack-plugin": "^0.0.6",
     "bootstrap": "^3.3.7",
     "font-awesome": "^4.7.0",
     "google-fonts-webpack-plugin": "^0.4.0",
