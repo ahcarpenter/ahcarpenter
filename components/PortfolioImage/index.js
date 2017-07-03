@@ -1,3 +1,5 @@
+import { Col, Image } from 'react-bootstrap'
+
 const PortfolioImage = ({ image }) => (
   <Col sm={4} md={4}>
     <div class="box">
