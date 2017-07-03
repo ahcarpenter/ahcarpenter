@@ -15,7 +15,7 @@ const About = ({ hidden }) => (
         <Col sm={12}>
           <Row>
             <Col sm={6} class="text-left">
-              <p>Born and raised in Lexington, KY on <strong>LEGOS, bourbon, a love of math, and desire to have the greastest possible positive impact</strong>, computer science seemed like a natural fit going into university.</p>
+              <p>Born and raised in Lexington, KY on <strong>LEGOS, bourbon, a love of math, and desire to have the greatest possible positive impact</strong>, computer science seemed like a natural fit going into university.</p>
               <p><img src={ProfilePic} alt="This is me" class="image img-circle img-responsive" /></p>
             </Col>
             <Col sm={6}>
