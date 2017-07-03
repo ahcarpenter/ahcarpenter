@@ -1,8 +1,8 @@
 import { Component } from 'preact';
 import style from './style';
-import Intro from '../../components/intro'
-import Portfolio from '../../components/portfolio'
-import About from '../../components/about'
+import Intro from '../../components/Intro'
+import Portfolio from '../../components/Portfolio'
+import About from '../../components/About'
 import CSSTransitionGroup from 'preact-css-transition-group';
 import Waypoint from 'react-waypoint';
 
