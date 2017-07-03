@@ -9,16 +9,16 @@
 import GoogleFontsPlugin from 'google-fonts-webpack-plugin';
 
 export default function (config, env, helpers) {
-  config.plugins = config.plugins.concat([
+  config.plugins.push(
     new GoogleFontsPlugin({
       formats: ["woff2"],
       fonts: [
         { family: "Open Sans", variants: [ "300", "700"] }
       ]
     })
-  ])
+  )
 
-  config.module.loaders = config.module.loaders.concat([
+  config.module.loaders.push(
     {
       test: /\.(gif|png|jpe?g|jpg|svg)$/i,
       loader: 'image-webpack-loader',
@@ -43,7 +43,14 @@ export default function (config, env, helpers) {
         }
       }
     }
-  ])
+  )
+
+  if (helpers.getPluginsByName(config, 'SWPrecacheWebpackPlugin')[0]) {
+    let { plugin } = helpers.getPluginsByName(config, 'SWPrecacheWebpackPlugin')[0]
+    plugin.options.dynamicUrlToDependencies = {
+      '/': ['build/index.html']
+    }
+  }
 }
 
 
