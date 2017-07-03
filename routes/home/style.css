@@ -1,0 +1,8 @@
+.auxillary-sections-enter {
+  opacity: 0.01;
+}
+
+.auxillary-sections-enter.auxillary-sections-enter-active {
+  opacity: 1;
+  transition: opacity 750ms ease-in;
+}
