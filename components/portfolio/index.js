@@ -23,7 +23,7 @@ const Portfolio = () => (
           <div class="box"><a href="https://howmanypages.herokuapp.com"><Image src={HowManyPagesScreenshot} alt="How Many Pages? Screenshot" responsive /></a></div>
         </Col>
         <Col sm={4} md={4}>
-          <div class="box"><a href="https://trumptales.herokuapp.com"><Image src={TrumpTalesScreenshot} alt="Trump Tales Screenshot" responsive /></a></div>
+          <div class="box"><a href="https://trump-tales.herokuapp.com"><Image src={TrumpTalesScreenshot} alt="Trump Tales Screenshot" responsive /></a></div>
         </Col>
         <Col sm={4} md={4}>
           <div class="box"><a href="https://gastro-gnomes-staging.herokuapp.com"><Image src={GastroGnomesStagingScreenshot} alt="Gastro Gnomes Staging Screenshot" responsive /></a></div>
