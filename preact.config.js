@@ -10,14 +10,6 @@ import GoogleFontsPlugin from 'google-fonts-webpack-plugin';
 
 export default function (config, env, helpers) {
   config.plugins = config.plugins.concat([
-    // new AutoDllPlugin({
-    //   inject: true, // will inject the DLL bundles to index.html
-    //   context: __dirname,
-    //   filename: '[name]_[hash].js',
-    //   entry: {
-    //     vendor: "/node_modules"
-    //   }
-    // }),
     new GoogleFontsPlugin({
       formats: ["woff2"],
       fonts: [

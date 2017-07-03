@@ -10,7 +10,7 @@ import AdoptaHydrantSyracuseScreenshot from './images/adoptahydrantsyracuse.gif'
 const Portfolio = () => (
   <section id="portfolio" class="no-padding-bottom">
     <div class="container">
-      <Row>
+      <Row id="portfolio-heading-row">
         <Col md={12}>
           <h2 class="heading">Projects</h2>
           <p class="lead margin-bottom--big">Showcase of some of my more recent projects. Check out additional on <a href="https://github.com/ahcarpenter">GitHub</a>.</p>

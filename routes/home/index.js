@@ -28,7 +28,7 @@ export default class Home extends Component {
     const auxillarySections = aboutHidden ?
       [<Portfolio key={0} />,
        <Waypoint onEnter={this.onAboutEnteredViewport}>
-        <div><About hidden={aboutHidden} /></div>
+        <div id="about-placeholder"><About hidden={aboutHidden} /></div>
        </Waypoint>
       ] :
       [<Portfolio key={0} />,
