@@ -17,8 +17,9 @@ export default class Home extends Component {
     }
   }
 
-  showPortfolio = () => {
+  showPortfolioAndHeader = () => {
     this.setState({auxillarySectionsHidden: false})
+    this.props.onIntroTypingDone()
   }
 
   onAboutEnteredViewport = () => {
@@ -36,16 +37,25 @@ export default class Home extends Component {
         <About key={1} />,
         <Footer key={2} />
       ]
+
+    console.log(style)
+
     return (
 			<div class={style.home}>
-        <Intro onTypingDone={this.showPortfolio} />
+        <Intro onTypingDone={this.showPortfolioAndHeader} />
         <CSSTransitionGroup
+          transitionAppear={true}
           transitionEnter={true}
+          transitionLeave={false}
           transitionName={{
             enter: style['auxillary-sections-enter'],
-            enterActive: style['auxillary-sections-enter-active']
+            enterActive: style['auxillary-sections-enter-active'],
+            appear: style['auxillary-sections-enter'],
+            appearActive: style['auxillary-sections-enter-active']
           }}
-          transitionEnterTimeout={750}>
+          transitionEnterTimeout={7500}
+          transitionAppearTimeout={7500}
+        >
           {!auxillarySectionsHidden && auxillarySections}
         </CSSTransitionGroup>
 			</div>
