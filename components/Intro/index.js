@@ -3,7 +3,11 @@ import '../../node_modules/react-typist/dist/Typist.css'
 import Typist from 'react-typist';
 
 const Intro = (props) => (
-  <section id="intro" class="text-intro no-padding-bottom">
+  <section
+    style={{'padding-top': props.tightenUpTopPadding ? '5px' : '90px'}}
+    id="intro"
+    class="text-intro no-padding-bottom"
+  >
     <div class="container">
       <Row>
         <Col md={12} lg={10}>

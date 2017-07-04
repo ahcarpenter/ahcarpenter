@@ -38,11 +38,12 @@ export default class Home extends Component {
         <Footer key={2} />
       ]
 
-    console.log(style)
-
     return (
 			<div class={style.home}>
-        <Intro onTypingDone={this.showPortfolioAndHeader} />
+        <Intro
+          tightenUpTopPadding={!this.state.auxillarySectionsHidden}
+          onTypingDone={this.showPortfolioAndHeader}
+        />
         <CSSTransitionGroup
           transitionAppear={true}
           transitionEnter={true}
