@@ -24,9 +24,6 @@ export default function (config, env, helpers) {
       loader: 'image-webpack-loader',
       query: {
         progressive: true,
-        mozjpeg: {
-          quality: 65
-        },
         svgo:{
           plugins: [
             {

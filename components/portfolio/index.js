@@ -5,6 +5,7 @@ import GastroGnomesStagingScreenshot from './images/gastro-gnomes-staging.gif'
 import ConduitScreenshot from './images/conduit.gif'
 import CrowdFinderScreenshot from './images/crowdfinder.gif'
 import AdoptaHydrantSyracuseScreenshot from './images/adoptahydrantsyracuse.gif'
+import PortfolioImage from '../PortfolioImage';
 
 const Portfolio = () => (
   <section id="portfolio" class="no-padding-bottom">
@@ -18,12 +19,12 @@ const Portfolio = () => (
     </div>
     <div class="container-fluid">
       <Row class="no-spaces">
-        <ImageWithPlaceholder image={HowManyPagesScreenshot} />
-        <ImageWithPlaceholder image={TrumpTalesScreenshot} />
-        <ImageWithPlaceholder image={GastroGnomesStagingScreenshot} />
-        <ImageWithPlaceholder image={ConduitScreenshot} />
-        <ImageWithPlaceholder image={CrowdFinderScreenshot} />
-        <ImageWithPlaceholder image={AdoptaHydrantSyracuseScreenshot} />
+        <PortfolioImage image={HowManyPagesScreenshot} />
+        <PortfolioImage image={TrumpTalesScreenshot} />
+        <PortfolioImage image={GastroGnomesStagingScreenshot} />
+        <PortfolioImage image={ConduitScreenshot} />
+        <PortfolioImage image={CrowdFinderScreenshot} />
+        <PortfolioImage image={AdoptaHydrantSyracuseScreenshot} />
       </Row>
     </div>
   </section>

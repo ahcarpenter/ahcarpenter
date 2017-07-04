@@ -22,17 +22,12 @@
   font-family: "Open Sans", Helvetica, Arial, sans-serif !important;
 }
 
-.loader:first-child {
-	position: absolute;
-	margin: 75% 43%;
-}
-
 #portfolio-heading-row {
 	margin-left: 0;
 	margin-right: 0;
 }
 
-#about-placeholder {
+#about-and-footer-sections-placeholder {
 	height: 1px;
 }
 
