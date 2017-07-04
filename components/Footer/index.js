@@ -6,7 +6,7 @@ const Footer = () => (
       <div class="container">
         <Row>
           <Col md="12" class="text-center">
-            <p class="credit">With initial design inspiration for this site courtesy of <a href="https://bootstrapious.com/blog" class="external">Bootstrapious</a></p>
+            <small class="credit">With initial design inspiration for this style courtesy of <a href="https://bootstrapious.com/blog" class="external">Bootstrapious</a>, in part</small>
           </Col>
         </Row>
       </div>
