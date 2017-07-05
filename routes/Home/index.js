@@ -17,6 +17,10 @@ export default class Home extends Component {
     }
   }
 
+  componentDidMount() {
+    this.props.onMounted()
+  }
+
   showPortfolioAndHeader = () => {
     this.setState({auxillarySectionsHidden: false})
     this.props.onIntroTypingDone()

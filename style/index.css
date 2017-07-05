@@ -19,3 +19,9 @@
   opacity: 1;
   transition: opacity 750ms ease-in;
 }
+
+.loader {
+  position: absolute;
+  left: 45%;
+  top: 45%;
+}
