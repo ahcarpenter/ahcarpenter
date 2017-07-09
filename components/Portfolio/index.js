@@ -1,5 +1,6 @@
 import { Col, Row } from 'react-bootstrap'
 import PortfolioImage from '../PortfolioImage';
+import Placeholder from '../Portfolio/images/placeholder-355x200.png'
 
 const images = [
   import('../Portfolio/images/howmanypages.gif'),
