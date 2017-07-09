@@ -24,4 +24,9 @@
   position: absolute;
   left: 45%;
   top: 45%;
+  height: 48px;
+}
+
+.portfolio-image img {
+  width: 100%;
 }

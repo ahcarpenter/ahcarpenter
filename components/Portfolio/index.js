@@ -1,11 +1,15 @@
-import { Col, Row, Image } from 'react-bootstrap'
-import HowManyPagesScreenshot from './images/howmanypages.gif'
-import TrumpTalesScreenshot from './images/trumptales.gif'
-import GastroGnomesStagingScreenshot from './images/gastro-gnomes-staging.gif'
-import ConduitScreenshot from './images/conduit.gif'
-import CrowdFinderScreenshot from './images/crowdfinder.gif'
-import AdoptaHydrantSyracuseScreenshot from './images/adoptahydrantsyracuse.gif'
+import { Col, Row } from 'react-bootstrap'
 import PortfolioImage from '../PortfolioImage';
+import Placeholder from '../Portfolio/images/placeholder-355x200.png'
+
+const images = [
+  import('../Portfolio/images/howmanypages.gif'),
+  import('../Portfolio/images/trumptales.gif'),
+  import('../Portfolio/images/gastro-gnomes-staging.gif'),
+  import('../Portfolio/images/conduit.gif'),
+  import('../Portfolio/images/crowdfinder.gif'),
+  import('../Portfolio/images/adoptahydrantsyracuse.gif')
+]
 
 const Portfolio = () => (
   <section id="portfolio" class="no-padding-bottom">
@@ -19,12 +23,7 @@ const Portfolio = () => (
     </div>
     <div class="container-fluid">
       <Row class="no-spaces">
-        <PortfolioImage image={HowManyPagesScreenshot} />
-        <PortfolioImage image={TrumpTalesScreenshot} />
-        <PortfolioImage image={GastroGnomesStagingScreenshot} />
-        <PortfolioImage image={ConduitScreenshot} />
-        <PortfolioImage image={CrowdFinderScreenshot} />
-        <PortfolioImage image={AdoptaHydrantSyracuseScreenshot} />
+        {images.map(Image => <PortfolioImage placeholder={Placeholder} image={Image} />)}
       </Row>
     </div>
   </section>
