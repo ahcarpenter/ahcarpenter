@@ -7,28 +7,32 @@ const PortfolioImage = class PortfolioImage extends Component {
     super()
 
     this.state = {
-      image: undefined
+      staticImage: undefined,
+      animatedImage: undefined
     }
   }
 
   componentDidMount() {
-    this.props.image.then(img => {
-      this.setState({image: img})
+    this.setState({staticImage: this.props.image[1]}, () => {
+      this.props.image[0].then(animatedImg => {
+        this.setState({animatedImage: animatedImg})
+      })
     })
   }
-
 
   render() {
     return (
       <Col sm={4} md={4}>
         <div class="box">
-          <ImageLoader
-            preloader={() => <img src={this.props.placeholder} />}
-            class="portfolio-image"
-            src={this.state.image}
-          >
-            Image load failed!
-          </ImageLoader>
+          <a href={this.props.image[2]} target="_blank">
+            <ImageLoader
+              preloader={() => <img src={this.state.staticImage || this.props.placeholder} />}
+              class="portfolio-image"
+              src={this.state.animatedImage || this.state.staticImage}
+            >
+              Image load failed!
+            </ImageLoader>
+          </a>
         </div>
       </Col>
     )
