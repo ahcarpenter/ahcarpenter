@@ -43,7 +43,7 @@ export default class Home extends Component {
       ]
 
     return (
-			<div class={style.home}>
+			<div class={style.home} rel="prefetch">
         <Intro
           tightenUpTopPadding={!this.state.auxillarySectionsHidden}
           onTypingDone={this.showPortfolioAndHeader}
