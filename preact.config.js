@@ -7,6 +7,7 @@
 //  * @param {WebpackConfigHelpers} helpers - object with useful helpers when working with config.
 //  *
 import GoogleFontsPlugin from 'google-fonts-webpack-plugin';
+import CompressionPlugin from "compression-webpack-plugin";
 
 export default function (config, env, helpers) {
   config.plugins.push(
@@ -18,36 +19,40 @@ export default function (config, env, helpers) {
     })
   )
 
-  config.module.loaders.push(
-    {
-      test: /\.(gif|png|jpe?g|jpg|svg)$/i,
-      loader: 'image-webpack-loader',
-      query: {
-        progressive: true,
-        svgo:{
-          plugins: [
-            {
-              removeViewBox: false
-            },
-            {
-              removeEmptyAttrs: false
-            }
-          ]
-        },
-        gifsicle: {
-          interlaced: true,
-          optimizationLevel: 3
+  if (env.production) {
+    config.module.loaders.push(
+      {
+        test: /\.(gif|png|jpe?g|jpg|svg)$/i,
+        loader: 'image-webpack-loader',
+        query: {
+          progressive: true,
+          svgo:{
+            plugins: [
+              {
+                removeViewBox: false
+              },
+              {
+                removeEmptyAttrs: false
+              }
+            ]
+          },
+          gifsicle: {
+            interlaced: true,
+            optimizationLevel: 3
+          }
         }
       }
-    }
-  )
-
-  if (helpers.getPluginsByName(config, 'SWPrecacheWebpackPlugin')[0]) {
-    let { plugin } = helpers.getPluginsByName(config, 'SWPrecacheWebpackPlugin')[0]
-    plugin.options.dynamicUrlToDependencies = {
-      '/': ['build/index.html']
-    }
+    )
+    config.plugins.push(
+      new CompressionPlugin({
+        asset: "[path].gz[query]",
+        algorithm: "gzip",
+        test: /\.(css|js|html)$/
+      })
+    )
   }
+
+  return config
 }
 
 

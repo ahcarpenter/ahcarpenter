@@ -23,10 +23,18 @@
     <noscript>
       <style>
         noscript {
-          position: absolute;
-          top: 40%;
-          left: 33%;
-          font-family: Helvetica;
+          .center {
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            top: 50%;
+            left: 50%;
+            margin-left: -50px;
+            margin-top: -25px;
+          }
+
+          width: 100%;
+          height: 100%;
         }
 
         .loader {
@@ -41,6 +49,6 @@
     }) %>
     <script defer src="<%= htmlWebpackPlugin.files.chunks['bundle'].entry %>"></script>
     <script>window.fetch||document.write('<script src="<%= htmlWebpackPlugin.files.chunks["polyfills"].entry %>"><\/script>')</script>
-    <noscript>🔮&nbsp;&nbsp;To use this website, please enable JavaScript.</noscript>
+    <noscript><div class="center">🔮&nbsp;&nbsp;To use this website, please enable JavaScript.</div></noscript>
   </body>
 </html>

@@ -14,23 +14,21 @@ const SocialLink = class SocialLink extends Component {
 
       physics({
         ...springProps,
-        acceleration: 500,
-        from: value.get(),
+        from: .001,
         velocity: 1000,
         onUpdate: value
       }).start()
     },
     hoveredOver: ({ value }) => {
       const springProps = {
-        to: value.current + 5,
+        to: .001,
         spring: 500,
         friction: .9
       };
 
       physics({
         ...springProps,
-        acceleration: 500,
-        from: value.get(),
+        from: 0,
         velocity: 1000,
         onUpdate: value
       }).start()
