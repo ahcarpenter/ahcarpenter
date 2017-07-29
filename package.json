@@ -17,13 +17,13 @@
     "extends": "eslint-config-synacor"
   },
   "devDependencies": {
-    "compression-webpack-plugin": "ijpiantanida/compression-webpack-plugin#emit-event",
     "eslint": "^4.1.1",
     "if-env": "^1.0.0",
     "purify-css": "^1.2.5",
     "purifycss-webpack": "^0.7.0"
   },
   "dependencies": {
+    "compression-webpack-plugin": "ijpiantanida/compression-webpack-plugin.git#emit-event",
     "bootstrap": "^3.3.7",
     "font-awesome": "^4.7.0",
     "glob-all": "^3.1.0",
