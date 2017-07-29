@@ -1554,9 +1554,9 @@ compressible@~2.0.10:
   dependencies:
     mime-db ">= 1.29.0 < 2"
 
-"compression-webpack-plugin@git://github.com/ijpiantanida/compression-webpack-plugin.git#emit-event":
+"compression-webpack-plugin@git+https://github.com/ijpiantanida/compression-webpack-plugin.git#emit-event":
   version "0.3.2"
-  resolved "git://github.com/ijpiantanida/compression-webpack-plugin.git#2b01c046e937bb4ad423651b42c8ff06832834fa"
+  resolved "git+https://github.com/ijpiantanida/compression-webpack-plugin.git#2b01c046e937bb4ad423651b42c8ff06832834fa"
   dependencies:
     async "0.2.x"
     webpack-sources "^0.1.0"
@@ -5449,8 +5449,8 @@ punycode@^1.2.4, punycode@^1.4.1:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.4.1.tgz#c0d5a63b2718800ad8e1eb0fa5269c84dd41845e"
 
 purify-css@^1.2.5:
-  version "1.2.5"
-  resolved "https://registry.yarnpkg.com/purify-css/-/purify-css-1.2.5.tgz#c4b9ec90735765f3e247ba6a3b49f132f3482500"
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/purify-css/-/purify-css-1.2.6.tgz#56c2b58e4e1134247c6fdc20ba443b51b45e8b2f"
   dependencies:
     clean-css "^4.0.12"
     glob "^7.1.1"
@@ -5557,9 +5557,9 @@ react-dom@~15.5.3:
     object-assign "^4.1.0"
     prop-types "~15.5.7"
 
-"react-flop-card@https://github.com/ahcarpenter/react-flop-card.git":
+react-flop-card@^0.1.0:
   version "0.1.0"
-  resolved "https://github.com/ahcarpenter/react-flop-card.git#26f8d3dc8b807135b01a6e4f30280f5f9f77652d"
+  resolved "https://registry.yarnpkg.com/react-flop-card/-/react-flop-card-0.1.0.tgz#8c4e33df2b7b55d9a9d023232f5af96b5a2ae2e3"
   dependencies:
     react-motion "^0.4.3"
 
