@@ -5557,9 +5557,9 @@ react-dom@~15.5.3:
     object-assign "^4.1.0"
     prop-types "~15.5.7"
 
-react-flop-card@^0.1.0:
+"react-flop-card@https://github.com/ahcarpenter/react-flop-card.git":
   version "0.1.0"
-  resolved "https://registry.yarnpkg.com/react-flop-card/-/react-flop-card-0.1.0.tgz#8c4e33df2b7b55d9a9d023232f5af96b5a2ae2e3"
+  resolved "https://github.com/ahcarpenter/react-flop-card.git#26f8d3dc8b807135b01a6e4f30280f5f9f77652d"
   dependencies:
     react-motion "^0.4.3"
 
