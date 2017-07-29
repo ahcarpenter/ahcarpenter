@@ -1,11 +1,11 @@
 import { Component } from 'preact';
 import style from './style';
 import Intro from '../../components/Intro'
-import Portfolio from '../../components/Portfolio'
-import About from '../../components/About'
-import CSSTransitionGroup from 'preact-css-transition-group';
-import Waypoint from 'react-waypoint';
-import Footer from '../../components/Footer';
+import Portfolio from 'async!../../components/Portfolio'
+import About from 'async!../../components/About'
+import CSSTransitionGroup from 'async!preact-css-transition-group';
+import Waypoint from 'async!react-waypoint';
+import Footer from 'async!../../components/Footer';
 
 export default class Home extends Component {
   constructor() {
