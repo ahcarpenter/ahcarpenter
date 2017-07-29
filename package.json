@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
+    "start": "if-env NODE_ENV=production && npm run -s serve --ignore-engines || npm run -s dev",
     "build": "preact build --template template.html",
     "serve": "preact build --template template.html && preact serve",
     "dev": "preact watch --template template.html",
@@ -17,13 +17,16 @@
     "extends": "eslint-config-synacor"
   },
   "devDependencies": {
-    "compression-webpack-plugin": "^1.0.0",
+    "compression-webpack-plugin": "git://github.com/ijpiantanida/compression-webpack-plugin.git#emit-event",
     "eslint": "^4.1.1",
-    "if-env": "^1.0.0"
+    "if-env": "^1.0.0",
+    "purify-css": "^1.2.5",
+    "purifycss-webpack": "^0.7.0"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
     "font-awesome": "^4.7.0",
+    "glob-all": "^3.1.0",
     "google-fonts-webpack-plugin": "^0.4.0",
     "halogen": "^0.2.0",
     "image-webpack-loader": "^3.3.1",
@@ -38,6 +41,7 @@
     "react-flop-card": "^0.1.0",
     "react-imageloader": "^2.1.0",
     "react-typist": "^1.1.1",
-    "react-waypoint": "^7.0.4"
+    "react-waypoint": "^7.0.4",
+    "simplehttp2server": "^2.0.0"
   }
 }

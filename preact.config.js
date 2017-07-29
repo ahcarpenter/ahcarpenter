@@ -8,6 +8,9 @@
 //  *
 import GoogleFontsPlugin from 'google-fonts-webpack-plugin';
 import CompressionPlugin from "compression-webpack-plugin";
+import PurifyCSSPlugin from 'purifycss-webpack';
+import path from 'path';
+import glob from 'glob-all';
 
 export default function (config, env, helpers) {
   config.plugins.push(
@@ -49,6 +52,17 @@ export default function (config, env, helpers) {
         asset: "[path].gz[query]",
         algorithm: "gzip",
         test: /\.(css|js|html)$/
+      })
+    )
+
+    config.plugins.push(
+      new PurifyCSSPlugin({
+        // Give paths to parse for rules. These should be absolute!
+        paths: glob.sync([
+          path.join(__dirname, 'index.js'),
+          path.join(__dirname, 'routes/**/index.js'),
+          path.join(__dirname, 'components/**/index.js'),
+        ]),
       })
     )
   }

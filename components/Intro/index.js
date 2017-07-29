@@ -12,7 +12,7 @@ const Intro = (props) => (
       <Row>
         <Col md={12} lg={10}>
           <h1>
-            <Typist onTypingDone={props.onTypingDone} avgTypingDelay={65} cursor={{show: false}}>
+            <Typist onTypingDone={props.onTypingDone} avgTypingDelay={55} cursor={{show: false}}>
               Hello.<br />I'm <span class="text-primary">Andrew Carpenter</span>, a software <span class="text-primary">engineer</span> living in Lexington, KY
             </Typist>
           </h1>

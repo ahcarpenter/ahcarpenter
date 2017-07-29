@@ -1,7 +1,4 @@
-import Col from 'react-bootstrap/lib/Col'
-import Row from 'react-bootstrap/lib/Row'
-import Image from 'react-bootstrap/lib/Image'
-import ProgressBar from 'react-bootstrap/lib/ProgressBar'
+import { Col, Row, Image, ProgressBar } from 'react-bootstrap'
 import ProfilePic from './profile.jpg'
 import style from './style'
 
