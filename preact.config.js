@@ -22,36 +22,31 @@ export default function (config, env, helpers) {
     })
   )
 
-  if (env.production) {
-    config.module.loaders.push(
-      {
-        test: /\.(gif|png|jpe?g|jpg|svg)$/i,
-        loader: 'image-webpack-loader',
-        query: {
-          progressive: true,
-          svgo:{
-            plugins: [
-              {
-                removeViewBox: false
-              },
-              {
-                removeEmptyAttrs: false
-              }
-            ]
-          },
-          gifsicle: {
-            interlaced: true,
-            optimizationLevel: 3
-          }
+  config.module.loaders.push(
+    {
+      test: /\.(gif|png|jpe?g|jpg|svg)$/i,
+      loader: 'image-webpack-loader',
+      query: {
+        progressive: true,
+        svgo:{
+          plugins: [
+            {
+              removeViewBox: false
+            },
+            {
+              removeEmptyAttrs: false
+            }
+          ]
+        },
+        gifsicle: {
+          interlaced: true,
+          optimizationLevel: 3
         }
       }
-    )
-
-    let { plugin } = helpers.getPluginsByName(config, 'SWPrecacheWebpackPlugin')[0]
-    plugin.options.dynamicUrlToDependencies = {
-      '/': ['build/index.html']
     }
+  )
 
+  if (env.production) {
     config.plugins.push(
       new CompressionPlugin({
         asset: "[path].gz[query]",

@@ -1554,9 +1554,9 @@ compressible@~2.0.10:
   dependencies:
     mime-db ">= 1.29.0 < 2"
 
-"compression-webpack-plugin@git+https://github.com/ijpiantanida/compression-webpack-plugin.git#emit-event":
+compression-webpack-plugin@ijpiantanida/compression-webpack-plugin#emit-event:
   version "0.3.2"
-  resolved "git+https://github.com/ijpiantanida/compression-webpack-plugin.git#2b01c046e937bb4ad423651b42c8ff06832834fa"
+  resolved "https://codeload.github.com/ijpiantanida/compression-webpack-plugin/tar.gz/2b01c046e937bb4ad423651b42c8ff06832834fa"
   dependencies:
     async "0.2.x"
     webpack-sources "^0.1.0"
@@ -5557,9 +5557,9 @@ react-dom@~15.5.3:
     object-assign "^4.1.0"
     prop-types "~15.5.7"
 
-react-flop-card@^0.1.0:
+react-flop-card@ahcarpenter/react-flop-card:
   version "0.1.0"
-  resolved "https://registry.yarnpkg.com/react-flop-card/-/react-flop-card-0.1.0.tgz#8c4e33df2b7b55d9a9d023232f5af96b5a2ae2e3"
+  resolved "https://codeload.github.com/ahcarpenter/react-flop-card/tar.gz/683090f445e05b38282657b075c1e9f0b83bdaa2"
   dependencies:
     react-motion "^0.4.3"
 
@@ -6671,8 +6671,8 @@ ua-parser-js@^0.7.9:
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.14.tgz#110d53fa4c3f326c121292bbeac904d2e03387ca"
 
 uglify-js@3.0.x, uglify-js@^3.0.13, uglify-js@^3.0.6:
-  version "3.0.26"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.0.26.tgz#ba279ca597b13fe6c62c2d87dd5188e57a7a3233"
+  version "3.0.27"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.0.27.tgz#a97db8c8ba6b9dba4e2f88d86aa9548fa6320034"
   dependencies:
     commander "~2.11.0"
     source-map "~0.5.1"
