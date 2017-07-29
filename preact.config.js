@@ -47,6 +47,11 @@ export default function (config, env, helpers) {
       }
     )
 
+    let { plugin } = helpers.getPluginsByName(config, 'SWPrecacheWebpackPlugin')[0]
+    plugin.options.dynamicUrlToDependencies = {
+      '/': ['build/index.html']
+    }
+
     config.plugins.push(
       new CompressionPlugin({
         asset: "[path].gz[query]",
@@ -69,6 +74,3 @@ export default function (config, env, helpers) {
 
   return config
 }
-
-
-
