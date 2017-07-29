@@ -43,6 +43,7 @@ export default function (config, env, helpers) {
         }
       }
     )
+
     config.plugins.push(
       new CompressionPlugin({
         asset: "[path].gz[query]",

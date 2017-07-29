@@ -1,3 +1,2 @@
-/*.js             /*.js.gz
-/*.css             /*.css.gz
-/*.html             /*.html.gz
+/bundle.*.js             /bundle.*.js.gz
+/style.*.css             /style.*.css.gz
