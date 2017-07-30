@@ -46,10 +46,8 @@ const SocialLink = class SocialLink extends Component {
             return (
                 <a {...this.props} onMouseEnter={setStateTo.hoveredOver} onMouseLeave={setStateTo.notHoveredOver} style={{transform: `translateY(-${v}px)`}}>
                   <OverlayTrigger placement="bottom" overlay={tooltip}>
-
-                  <i class={`${this.props.iconClass} social-link`} />
-
-      </OverlayTrigger>
+                    <i alt={this.props.alt} class={`${this.props.iconClass} social-link`} />
+                  </OverlayTrigger>
                 </a>
             )
           }}
