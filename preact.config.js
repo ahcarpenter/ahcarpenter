@@ -13,15 +13,6 @@ import path from 'path';
 import glob from 'glob-all';
 
 export default function (config, env, helpers) {
-  config.plugins.push(
-    new GoogleFontsPlugin({
-      formats: ["woff2"],
-      fonts: [
-        { family: "Open Sans", variants: [ "300", "700"] }
-      ]
-    })
-  )
-
   config.module.loaders.push(
     {
       test: /\.(gif|png|jpe?g|jpg|svg)$/i,
