@@ -1,4 +1,4 @@
-import { Col, Image } from 'react-bootstrap'
+import { Col, Image, Tooltip, OverlayTrigger } from 'react-bootstrap'
 import { Component } from 'preact'
 import { physics } from 'popmotion';
 import { MotionValue } from 'popmotion-react';
@@ -36,16 +36,24 @@ const SocialLink = class SocialLink extends Component {
   };
 
   render() {
+    const tooltip = (
+      <Tooltip id="tooltip"><strong>{this.props.alt}</strong></Tooltip>
+    );
+
     return (
       <MotionValue initialState="notHoveredOver" onStateChange={this.stateChangeHandlers}>
-        {({v, setStateTo}) => {
-          return (
-            <a {...this.props} onMouseEnter={setStateTo.hoveredOver} onMouseLeave={setStateTo.notHoveredOver} style={{transform: `translateY(-${v}px)`}}>
-              <i class={this.props.iconClass} />
-            </a>
-          )
-        }}
-      </MotionValue>
+          {({v, setStateTo}) => {
+            return (
+                <a {...this.props} onMouseEnter={setStateTo.hoveredOver} onMouseLeave={setStateTo.notHoveredOver} style={{transform: `translateY(-${v}px)`}}>
+                  <OverlayTrigger placement="bottom" overlay={tooltip}>
+
+                  <i class={`${this.props.iconClass} social-link`} />
+
+      </OverlayTrigger>
+                </a>
+            )
+          }}
+        </MotionValue>
     )
   }
 }

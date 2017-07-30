@@ -1,0 +1,109 @@
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif !important;
+}
+
+#portfolio-heading-row {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+#about-and-footer-sections-placeholder {
+	height: 1px;
+}
+
+.header-enter {
+  opacity: 0.01;
+}
+
+.header-enter.header-enter-active {
+  opacity: 1;
+  transition: opacity 750ms ease-in;
+}
+
+.loader {
+  position: absolute;
+  left: 45%;
+  top: 45%;
+  height: 48px;
+}
+
+.portfolio-image img {
+  width: 100%;
+  overflow: hidden;
+}
+
+.front-of-card {
+  border: 1px solid #f7f7f7;
+  height: 100%;
+
+  &:hover {
+    cursor: pointer;
+
+    &:after {
+      content: " ";
+      z-index: 10;
+      display: block;
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255.0, 255.0, 255.0, 0.7);
+    }
+  }
+}
+
+.thumbnail {
+  background-color: rgba(0.0, 0.0, 0.0, 0.5);
+  border-radius: 0;
+}
+
+#project div div:first-child {
+  backface-visibility: inherit !important;
+}
+
+.thumbnail .caption {
+  height: 100%;
+}
+
+i {
+  font-size: 36px;
+  color: rgba(255.0, 255.0, 255.0, 1.0) !important;
+  text-decoration: none;
+}
+
+i:hover,
+i:focus {
+  color: rgba(255.0, 255.0, 255.0, 0.7) !important;
+}
+
+i:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+i.social-link {
+  color: inherit !important;
+  text-decoration: none;
+}
+i:hover.social-link,
+i:focus.social-link {
+  color: inherit !important;
+}
+i:focus.social-link {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}

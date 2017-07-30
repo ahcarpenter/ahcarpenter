@@ -1,5 +1,5 @@
 import { Component } from 'preact';
-import { Col, Image, Thumbnail } from 'react-bootstrap'
+import { Col, Image, Thumbnail, Tooltip, OverlayTrigger } from 'react-bootstrap'
 import ImageLoader from 'react-imageloader'
 import { FlipCard } from 'react-flop-card';
 import style from './style'
@@ -35,7 +35,7 @@ const PortfolioImage = class PortfolioImage extends Component {
 
   updateDimensions = () => {
     const box = document.getElementsByClassName('box')[0]
-    this.setState({width: box.offsetWidth})
+    this.setState({width: box.offsetWidth, flipCardHeight: document.getElementsByClassName(this.props.image[2])[0].children[0].offsetHeight})
   }
 
   onCardClicked = (e) => {
@@ -50,10 +50,10 @@ const PortfolioImage = class PortfolioImage extends Component {
 
   render() {
     const FrontOfCard = (
-      <div role="button">
+      <div>
         <ImageLoader
           preloader={() => <img src={this.state.staticImage || this.props.placeholder} />}
-          class={`portfolio-image ${this.props.image[2]}`}
+          class={`portfolio-image ${this.props.image[2]} front-of-card`}
           src={this.state.animatedImage || this.state.staticImage}
           imgProps={{width: this.state.width}}
           onLoad={() => this.setState({flipCardHeight: document.getElementsByClassName(this.props.image[2])[0].children[0].offsetHeight})}
@@ -68,12 +68,16 @@ const PortfolioImage = class PortfolioImage extends Component {
         <div style={{display: 'flex', justifyContent: 'space-around', alignItems: 'center', height: '100%'}}>
           {this.props.image[3] &&
             <a href={this.props.image[3]}>
-              <i class="fa fa-2x fa-github" />
+              <OverlayTrigger placement="top" overlay={<Tooltip id="tooltip"><strong>View On GitHub</strong></Tooltip>}>
+                <i class="fa fa-2x fa-github" />
+              </OverlayTrigger>
             </a>
           }
           {this.props.image[2] &&
             <a href={this.props.image[2]}>
-              <i class="fa fa-2x fa-link" />
+              <OverlayTrigger placement="top" overlay={<Tooltip id="tooltip"><strong>View Site</strong></Tooltip>}>
+                <i class="fa fa-2x fa-link" />
+              </OverlayTrigger>
             </a>
           }
         </div>
@@ -82,7 +86,7 @@ const PortfolioImage = class PortfolioImage extends Component {
 
     return (
       <Col sm={4} md={4}>
-        <div class="box">
+        <div id="project" class="box">
           <FlipCard
             flipped={ this.state.flipped }
             onClick={ this.onCardClicked }
