@@ -50,7 +50,7 @@ const PortfolioImage = class PortfolioImage extends Component {
 
   render() {
     const FrontOfCard = (
-      <a role="button">
+      <div role="button">
         <ImageLoader
           preloader={() => <img src={this.state.staticImage || this.props.placeholder} />}
           class={`portfolio-image ${this.props.image[2]}`}
@@ -60,7 +60,7 @@ const PortfolioImage = class PortfolioImage extends Component {
         >
           Image load failed!
         </ImageLoader>
-      </a>
+      </div>
     )
 
     const BackOfCard = (
