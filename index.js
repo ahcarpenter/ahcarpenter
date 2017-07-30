@@ -5,7 +5,7 @@ import "./style"
 import FontFaceObserver from 'fontfaceobserver'
 
 const font = new FontFaceObserver('Open Sans', {weight: [300, 700]})
-font.load().then(console.log('Open Sans loaded!'))
+font.load().then(() => document ? document.documentElement.className += " fonts-loaded" : null )
 
 import App from './components/App'
 
