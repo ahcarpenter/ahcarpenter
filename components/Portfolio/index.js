@@ -3,12 +3,12 @@ import PortfolioImage from '../PortfolioImage';
 import Placeholder from '../Portfolio/images/placeholder-355x200.png'
 
 const images = [
-  [import('./images/howmanypages-400px.gif'), require('./images/howmanypages-static.png'), 'https://howmanypages.herokuapp.com'],
-  [import('./images/trumptales-400px.gif'), require('./images/trumptales-static.png'), 'https://trump-tales.herokuapp.com'],
-  [import('./images/gastro-gnomes-staging-400px.gif'), require('./images/gastro-gnomes-staging-static.png'), 'https://gastro-gnomes-staging.herokuapp.com'],
-  [import('./images/conduit-400px.gif'), require('./images/conduit-static.png'), 'https://github.com/ahcarpenter/rails-realworld-example-app'],
-  [import('./images/crowdfinder-400px.gif'), require('./images/crowdfinder-static.png'), 'https://crowdfinder.herokuapp.com'],
-  [import('./images/adoptahydrantsyracuse-400px.gif'), require('./images/adoptahydrantsyracuse-static.png'), 'https://adopt-a-hydrant-syracuse.herokuapp.com']
+  [import('./images/howmanypages-400px.gif'), require('./images/howmanypages-static.png'), 'https://howmanypages.herokuapp.com', 'https://github.com/ahcarpenter/howmanypages', 'How Many Pages?'],
+  [import('./images/trumptales-400px.gif'), require('./images/trumptales-static.png'), 'https://trump-tales.herokuapp.com', undefined, 'TrumpTales'],
+  [import('./images/gastro-gnomes-staging-400px.gif'), require('./images/gastro-gnomes-staging-static.png'), 'https://gastro-gnomes-staging.herokuapp.com', undefined, 'Gastro Gnomes Staging'],
+  [import('./images/conduit-400px.gif'), require('./images/conduit-static.png'), undefined, undefined, 'Conduit'],
+  [import('./images/crowdfinder-400px.gif'), require('./images/crowdfinder-static.png'), 'https://crowdfinder.herokuapp.com', undefined, 'CrowdFinder'],
+  [import('./images/adoptahydrantsyracuse-400px.gif'), require('./images/adoptahydrantsyracuse-static.png'), 'https://adopt-a-hydrant-syracuse.herokuapp.com', 'https://github.com/ahcarpenter/adopt-a-hydrant-syracuse', 'Adopt-a-Hydrant-Syracuse']
 ]
 
 const Portfolio = () => (

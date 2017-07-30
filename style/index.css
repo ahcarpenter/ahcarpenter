@@ -29,4 +29,17 @@
 
 .portfolio-image img {
   width: 100%;
+  overflow: hidden;
+}
+
+.frontOfCard {
+  border: 1px solid #f7f7f7;
+}
+
+.thumbnail {
+  border-radius: 0;
+}
+
+.thumbnail .caption {
+  height: 100%;
 }
