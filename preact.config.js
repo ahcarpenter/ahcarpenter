@@ -57,6 +57,10 @@ export default function (config, env, helpers) {
 
     config.plugins.push(
       new PurifyCSSPlugin({
+        purifyOptions: {
+          whitelist: ['*__*', '*tooltip*', '*caption*']
+        },
+        styleExtensions: ['.css', '.scss'],
         // Give paths to parse for rules. These should be absolute!
         paths: glob.sync([
           path.join(__dirname, 'index.js'),

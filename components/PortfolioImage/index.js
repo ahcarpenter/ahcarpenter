@@ -65,7 +65,7 @@ const PortfolioImage = class PortfolioImage extends Component {
 
     const BackOfCard = (
       <Thumbnail class={`portfolio-image ${style['card-back']} text-center`} href="#">
-        <div style={{display: 'flex', justifyContent: 'space-around', alignItems: 'center', height: '100%'}}>
+        <div class={`${style['thumbnail-links']}`}>
           {this.props.image[3] &&
             <a href={this.props.image[3]}>
               <OverlayTrigger placement="top" overlay={<Tooltip id="tooltip"><strong>View On GitHub</strong></Tooltip>}>
