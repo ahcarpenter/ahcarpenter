@@ -1101,7 +1101,7 @@ label {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 14px;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
 }
 .pager li {
@@ -1130,7 +1130,7 @@ label {
 /* pagination */
 .pagination {
   margin: 24px 0;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   border-radius: 0;
 }
 .pagination > li > a,
@@ -1489,7 +1489,9 @@ body,
   .h6,
   body,
   .label,
-  .btn  {
+  .btn,
+  .pager,
+  .pagination  {
     font-family: "Open Sans", Helvetica, Arial, sans-serif;
   }
 }
