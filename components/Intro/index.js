@@ -13,7 +13,7 @@ const Intro = (props) => (
         <Col md={12} lg={10}>
           <h1>
             <Typist onTypingDone={props.onTypingDone} avgTypingDelay={45} cursor={{show: false}}>
-              Hello.<br />I'm <span class="text-primary">Andrew Carpenter</span>, a software <span class="text-primary">engineer</span> living in Lexington, KY
+              Hello.<br />I'm <span class="text-primary">Andrew Carpenter</span>, a software <span class="text-primary">engineer</span> living in the greater Nashville area
             </Typist>
           </h1>
         </Col>
